@@ -1,0 +1,33 @@
+# Data files
+creditcard.csv
+*.csv
+
+# Models (auto-generated)
+models/fraud_model.pkl
+models/scaler.pkl
+*.pkl
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
