@@ -2,10 +2,6 @@
 creditcard.csv
 *.csv
 
-# Models (auto-generated)
-models/fraud_model.pkl
-models/scaler.pkl
-*.pkl
 
 # Python
 __pycache__/

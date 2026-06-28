@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  fraud-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fraud-detection-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./models:/app/models:ro  # Read-only mount for models
+    restart: unless-stopped
+    networks:
+      - fraud-network
+
+networks:
+  fraud-network:
+    driver: bridge
+
+# To run:
+# docker-compose up --build
+#
+# To run in background:
+# docker-compose up -d --build
+#
+# To stop:
+# docker-compose down
+#
+# To view logs:
+# docker-compose logs -f
